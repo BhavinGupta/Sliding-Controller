@@ -241,7 +241,7 @@ static const CGFloat slidingSpeed = 500.0;
         
         CGFloat distanceToTheEdge = centerForEdge - _topViewContainer.center.x;
         CGFloat timeToEdgeWithCurrentVelocity = fabs(distanceToTheEdge) / fabs(velocity);
-        CGFloat timeToEdgeWithStandardVelocity = fabsf(distanceToTheEdge) / slidingSpeed;
+        CGFloat timeToEdgeWithStandardVelocity = fabs(distanceToTheEdge) / slidingSpeed;
                 
         if (timeToEdgeWithCurrentVelocity < 0.7 * timeToEdgeWithStandardVelocity) {
             //Bounce and open
